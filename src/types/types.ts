@@ -1,6 +1,6 @@
 export interface State {
     goals: {
-        id: Number,
+        id: number,
         name: string,
         date: Date,
     }

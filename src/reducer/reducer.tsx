@@ -11,7 +11,7 @@ const initialState: State = {
 }
 
 // Use the initialState as a default value
-export default function appReducer(state = initialState, action: Action) {
+export default function appReducer(state = initialState, action: Action): State {
     // The reducer normally looks at the action type field to decide what happens
     console.log("action!");
     switch (action.type) {
