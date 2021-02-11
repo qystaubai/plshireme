@@ -3,11 +3,15 @@ import {Action} from "redux";
 
 
 const initialState: State = {
-    goals: {
+    goals: [{
         id: 0,
-        name: "try it",
-        date: new Date()
-    }
+        title: "try it",
+        deadline: new Date()
+    }, {
+        id: 1,
+        title: "try i",
+        deadline: new Date()
+    }]
 }
 
 // Use the initialState as a default value

@@ -1,7 +1,9 @@
+export interface Goal {
+    id: number,
+    title: string,
+    deadline: Date,
+}
+
 export interface State {
-    goals: {
-        id: number,
-        name: string,
-        date: Date,
-    }
+    goals: Goal[]
 }
