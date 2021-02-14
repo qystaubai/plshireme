@@ -25,11 +25,15 @@ const config: webpack.Configuration = {
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             }
         ],
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js"],
+        extensions: [".tsx", ".ts", ".js", ".svg"],
     },
     output: {
         path: path.resolve(__dirname, "build"),

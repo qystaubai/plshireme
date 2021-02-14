@@ -5,11 +5,11 @@ import {Action} from "redux";
 const initialState: State = {
     goals: [{
         id: 0,
-        title: "try it",
+        title: "Order pizza",
         deadline: new Date()
     }, {
         id: 1,
-        title: "try i",
+        title: "Find a job",
         deadline: new Date()
     }]
 }
