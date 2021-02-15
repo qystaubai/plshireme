@@ -5,5 +5,12 @@ export interface Goal {
 }
 
 export interface State {
-    goals: Goal[]
+    currentGoals: Goal[],
+    doneGoals: Goal[],
+    repeatedGoals: Goal[]
+}
+
+export interface Action {
+    type: string,
+    payload: Goal[]
 }

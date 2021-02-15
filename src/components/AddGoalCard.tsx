@@ -1,14 +1,14 @@
 import React, {ReactElement} from "react";
-import {Goal} from "../types/types";
+// import {Goal} from "../types/types";
 
-export const GoalCardComponent: React.FC<Goal> = (goal: Goal): ReactElement => {
+export const GoalCardComponent: React.FC = (): ReactElement => {
     return (
-        <div className="goal card">
+        <div className={"goal card"}>
             <div className="goal-title">
-                me {goal.title}
+                <input/>
             </div>
             <div className="goal-deadline">
-                yesterday {goal.deadline.toString()}
+                <input/>
             </div>
         </div>
     )

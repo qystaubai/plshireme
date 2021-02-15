@@ -1,19 +1,25 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import {useStore} from "react-redux";
-import {Goal} from "../types/types";
+import {Goal, State} from "../types/types";
 import {GoalCardComponent} from "./GoalCard";
 
-export const BoardComponent: React.FC = () => {
+export const BoardComponent: React.FC = (): ReactElement => {
 
-    const state = useStore().getState();
+    const state: State = useStore().getState();
     console.log(state);
 
     return (
         <div className="board-container">
             <div className="board">
                 <div className="goals card">
-                    {state.goals.map((goal: Goal) =>
-                        <GoalCardComponent {...goal} key={goal.id}/>
+                    {state.repeatedGoals.map((goal: Goal) =>
+                        <GoalCardComponent goal={goal} done={false} key={goal.id}/>
+                    )}
+                    {state.currentGoals.map((goal: Goal) =>
+                        <GoalCardComponent goal={goal} done={false} key={goal.id}/>
+                    )}
+                    {state.doneGoals.map((goal: Goal) =>
+                        <GoalCardComponent goal={goal} done={true} key={goal.id}/>
                     )}
                 </div>
 
