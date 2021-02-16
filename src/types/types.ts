@@ -2,12 +2,12 @@ export interface Goal {
     id: number,
     title: string,
     deadline: Date,
+    done: boolean,
+    repeated: boolean
 }
 
 export interface State {
-    currentGoals: Goal[],
-    doneGoals: Goal[],
-    repeatedGoals: Goal[]
+    goals: Goal[],
 }
 
 export interface Action {
