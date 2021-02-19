@@ -6,7 +6,7 @@ const initialState: State = {
         {
             id: 0,
             title: "Order pizza",
-            deadline: new Date(),
+            deadline: new Date('February 21, 2021 03:24:00'),
             done: false,
             repeated: false
         },

@@ -2,6 +2,7 @@ import React, {ReactElement} from "react";
 import {useStore} from "react-redux";
 import {Goal, State} from "../types/types";
 import {GoalCardComponent} from "./GoalCard";
+import {CalendarCardComponent} from "./CalendarCard";
 
 export const BoardComponent: React.FC = (): ReactElement => {
 
@@ -33,6 +34,9 @@ export const BoardComponent: React.FC = (): ReactElement => {
 
                 <div className="calendar card">
                     me calendar
+                        {state.goals.map((goal: Goal) =>
+                            <CalendarCardComponent {...goal} key={goal.id}/>
+                        )}
                 </div>
             </div>
         </div>

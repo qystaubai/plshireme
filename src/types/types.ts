@@ -7,7 +7,7 @@ export interface Goal {
 }
 
 export interface State {
-    goals: Goal[],
+    goals: Goal[]
 }
 
 export interface Action {

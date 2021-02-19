@@ -43,6 +43,7 @@ body {
 .card {
     margin: .5vh .5vw;
     padding: .5vh .5vw;
+    font-size: 2rem;
     border: 2px solid #48A9A6;
     border-radius: 10px;
 }
@@ -67,4 +68,8 @@ body {
 
 .goal-deadline {
     text-align: end;
+}
+
+.calendar {
+
 }
