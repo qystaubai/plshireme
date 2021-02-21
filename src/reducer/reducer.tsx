@@ -1,4 +1,5 @@
-import {State, Action} from "../types/types";
+import {State} from "../types/types";
+import {ActionTypes, Actions} from "../types/actionTypes";
 
 
 const initialState: State = {
@@ -50,25 +51,16 @@ const initialState: State = {
 
 
 // Use the initialState as a default value
-export default function appReducer(state = initialState, action: Action): State {
+export default function appReducer(state = initialState, action: Actions): State {
     // The reducer normally looks at the action type field to decide what happens
     console.log(state);
     switch (action.type) {
-        case ("goals/added"):
-            return {
-                ...state,
-                goals: [
-                    ...state.goals,
-                    ...action.payload,
-                ]
-            }
-        case ("goals/done"): {
+        case ActionTypes.GOAL_DONE: {
             const goalsList = [...state.goals];
-            const changedGoalsList = [...action.payload];
-            changedGoalsList.map(changedGoal => {
-                const changedGoalIndex = goalsList.indexOf(changedGoal);
-                if (changedGoalIndex) {
-                    goalsList[changedGoalIndex].done = true;
+
+            goalsList.map(changedGoal => {
+                if (changedGoal.id == action.payload.goalId) {
+                    changedGoal.done = true;
                 }
             })
             return {

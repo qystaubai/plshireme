@@ -9,8 +9,3 @@ export interface Goal {
 export interface State {
     goals: Goal[]
 }
-
-export interface Action {
-    type: string,
-    payload: Goal[]
-}
