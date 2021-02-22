@@ -1,3 +1,3 @@
 # plshireme
 Personal productivity manager
-Typescript + react + redux
+Typescript + react + redux + webpack
