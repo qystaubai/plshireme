@@ -4,6 +4,7 @@ import {Goal, State} from "../types/types";
 import {GoalCardComponent} from "./GoalCard";
 import {CalendarCardComponent} from "./CalendarCard";
 import {goalDoneAction} from "../actions/actions";
+import AddGoalCardComponent from "./AddGoalCard";
 
 
 const mapStateToProps = (state: State) => ({goals: state.goals});
@@ -18,21 +19,14 @@ type Props = PropsFromRedux;
 
 const BoardComponent: React.FC<Props> = (props: Props): ReactElement => {
 
-    const handleGoalDone = (goalId: number) => {
-        props.goalDoneAction(goalId)
-        console.log("doing")
-    }
     return (
         <div className="board-container">
             <div className="board">
                 <div className="goals card">
                     {props.goals.map((goal: Goal) =>
-                        <div key={goal.id}>
-                            <GoalCardComponent {...goal}/>
-                            {/*testing button*/}
-                            <button onClick={() => handleGoalDone(goal.id)}> goal done</button>
-                        </div>
+                        <GoalCardComponent key={goal.id} {...goal}/>
                     )}
+                    <AddGoalCardComponent />
 
                 </div>
 

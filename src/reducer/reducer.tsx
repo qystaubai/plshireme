@@ -55,6 +55,15 @@ export default function appReducer(state = initialState, action: Actions): State
     // The reducer normally looks at the action type field to decide what happens
     console.log(state);
     switch (action.type) {
+        case ActionTypes.GOAL_ADDED:
+            return {
+                ...state,
+                goals: [
+                    ...state.goals,
+                    action.payload
+                ]
+
+            }
         case ActionTypes.GOAL_DONE: {
             const goalsList = [...state.goals];
 

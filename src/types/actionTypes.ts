@@ -1,5 +1,8 @@
+import {Goal} from "./types";
+
 export enum ActionTypes {
-    GOAL_DONE = "goal/done"
+    GOAL_DONE = "goal/done",
+    GOAL_ADDED = "goal/added"
 }
 
 interface GoalDoneAction {
@@ -9,4 +12,9 @@ interface GoalDoneAction {
     }
 }
 
-export type Actions = GoalDoneAction;
+interface GoalAddedAction {
+    type: typeof ActionTypes.GOAL_ADDED,
+    payload: Goal
+}
+
+export type Actions = GoalDoneAction | GoalAddedAction;

@@ -35,7 +35,7 @@ body {
 
 
 .board {
-    height: 90vh;
+    height: 93vh;
     display: grid;
     grid-template-columns: 2fr 4fr;
 }
@@ -68,6 +68,20 @@ body {
 
 .goal-deadline {
     text-align: end;
+}
+
+.input {
+    background: none;
+    color: #f0f8ff;
+    font-size: 2rem;
+    border: none;
+    border-bottom: .15rem solid #f0f8ff;
+    transition: border-bottom-color .4s;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom-color: #F7B32B;
 }
 
 .calendar {
