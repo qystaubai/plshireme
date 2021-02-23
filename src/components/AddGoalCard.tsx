@@ -1,7 +1,6 @@
 import React, {ReactElement, useState} from "react";
 import {connect, ConnectedProps} from "react-redux";
 import {goalAddedAction} from "../actions/actions";
-import {ActionTypes} from "../types/actionTypes";
 import {State} from "../types/types";
 // import {Goal} from "../types/types";
 
@@ -34,14 +33,21 @@ export const AddGoalCardComponent: React.FC<Props> = (props): ReactElement => {
         }
     }
     return (
-        <div className={"goal card"}>
-            <div className="goal-title">
+        <div className="add-goal card">
+            <div className="add-goal-title">
                 <input className="input" value={goalTitle} onChange={onChange}/>
             </div>
-            <div className="goal-deadline">
-                <input type="date"/>
+            <div className="add-goal-info-tab">
+                <div>
+                    Deadline
+                    <input className="add-goal-info-tab__datetime-input" type="datetime-local"/>
+                </div>
+                <div>
+                    <input className="add-goal-info-tab__repeated-checkbox" type="checkbox"/>
+                    Repeated
+                </div>
             </div>
-            <button onClick={handleGoalAdded}>Save</button>
+                <button className="add-goal-button" onClick={handleGoalAdded}>Add</button>
         </div>
     )
 }

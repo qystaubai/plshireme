@@ -45,7 +45,7 @@ body {
     padding: .5vh .5vw;
     font-size: 2rem;
     border: 2px solid #48A9A6;
-    border-radius: 10px;
+    border-radius: .7rem;
 }
 
 .goal {
@@ -82,6 +82,55 @@ body {
 .input:focus {
     outline: none;
     border-bottom-color: #F7B32B;
+}
+.add-goal {
+    margin: .5vh .1vw;
+    padding: .5vh 1vw;
+    border: none;
+    background-color: #5F9DD4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+}
+.add-goal-info-tab {
+    padding: .5vh .5vw;
+    font-size: 1.2rem;
+}
+
+.add-goal-info-tab__datetime-input {
+    background: none;
+    color: #f0f8ff;
+    font-family: "system-ui", sans-serif;
+    border: 1px solid #f0f8ff;
+    border-radius: .2rem;
+    padding: 0 .5vw;
+    transition: border-color .4s;
+}
+
+.add-goal-info-tab__datetime-input:focus {
+    outline: none;
+    border-color: #F7B32B;
+}
+
+.add-goal-info-tab__datetime-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.add-goal-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: none;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    transition: border-color .4s, color .4s;
+}
+
+.add-goal-button:focus {
+    outline: none;
+}
+.add-goal-button:hover {
+    color: #F7B32B;
+    border-color: #F7B32B;
 }
 
 .calendar {
