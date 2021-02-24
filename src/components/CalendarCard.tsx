@@ -4,7 +4,7 @@ import {Goal} from "../types/types";
 export const CalendarCardComponent: React.FC<Goal> = (goal) => {
 
     const style = {
-        marginRight: `${(new Date('February 27, 2021 03:24:00').valueOf() - goal.deadline.valueOf())/864000}px`
+        // marginRight: `${(new Date('February 27, 2021 03:24:00').valueOf() - goal.deadline.valueOf())/864000}px`
 
     }
 
