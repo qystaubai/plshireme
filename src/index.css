@@ -57,8 +57,6 @@ body {
     padding: .5vh 1vw;
     border: none;
     background-color: #5F9DD4;
-    display: grid;
-    grid-template-columns: 6fr 2fr;
     font-size: 2rem;
     /*width: 25vw;*/
 }

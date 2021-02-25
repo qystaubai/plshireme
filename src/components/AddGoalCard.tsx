@@ -30,6 +30,7 @@ export const AddGoalCardComponent: React.FC<Props> = (props): ReactElement => {
     const onChange = (e: React.FormEvent<HTMLInputElement>) => {
 
         if (e.currentTarget.name === "deadline") {
+            console.log(new Date(e.currentTarget.value))
             setGoal({
                 ...goal,
                 [e.currentTarget.name]: new Date(e.currentTarget.value)
@@ -69,7 +70,7 @@ export const AddGoalCardComponent: React.FC<Props> = (props): ReactElement => {
             <div className="add-goal__info-tab">
                 <div>
                     Deadline
-                    <input name="deadline" className="add-goal__datetime-input" value={goal.deadline.toISOString().slice(0,-8)} onChange={onChange} type="datetime-local"/>
+                    <input name="deadline" className="add-goal__datetime-input" value={new Date(goal.deadline.valueOf() - (new Date().getTimezoneOffset() * 60000)).toISOString().slice(0,-8)} onChange={onChange} type="datetime-local"/>
                 </div>
                 <div>
                     Repeated

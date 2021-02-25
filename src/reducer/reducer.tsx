@@ -14,35 +14,35 @@ const initialState: State = {
         {
             id: 1,
             title: "Find a job",
-            deadline: new Date(),
+            deadline: new Date('February 27, 2021 03:24:00'),
             done: false,
             repeated: false
         },
         {
             id: 2,
             title: "Order pizza",
-            deadline: new Date(),
+            deadline: new Date('February 25, 2021 22:24:00'),
             done: false,
             repeated: false
         },
         {
             id: 3,
             title: "cry",
-            deadline: new Date(),
+            deadline: new Date('February 26, 2021 03:24:00'),
             done: false,
             repeated: false
         },
         {
             id: 4,
             title: "Brush teeth",
-            deadline: new Date(),
+            deadline: new Date('February 25, 2021 19:20:00'),
             done: false,
             repeated: false
         },
         {
             id: 5,
             title: "Morning coffee",
-            deadline: new Date(),
+            deadline: new Date('February 21, 2022 03:24:00'),
             done: false,
             repeated: false
         }]
