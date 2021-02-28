@@ -156,5 +156,5 @@ body {
 }
 
 .calendar {
-
+    overflow: scroll;
 }

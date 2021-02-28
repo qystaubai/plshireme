@@ -70,7 +70,22 @@ export const AddGoalCardComponent: React.FC<Props> = (props): ReactElement => {
             <div className="add-goal__info-tab">
                 <div>
                     Deadline
-                    <input name="deadline" className="add-goal__datetime-input" value={new Date(goal.deadline.valueOf() - (new Date().getTimezoneOffset() * 60000)).toISOString().slice(0,-8)} onChange={onChange} type="datetime-local"/>
+                    <input name="deadline"
+                           className="add-goal__datetime-input"
+                           value={
+                               new Date(goal.deadline.valueOf() - (new Date().getTimezoneOffset() * 60000))
+                                   .toISOString()
+                                   .slice(0, -8)
+                           }
+                           min={new Date().toISOString().slice(0, -8)}
+                           max={
+                               new Date(new Date()
+                                   .setMonth(new Date().getMonth() + 1))
+                                   .toISOString()
+                                   .slice(0, -8)
+                           }
+                           onChange={onChange}
+                           type="datetime-local"/>
                 </div>
                 <div>
                     Repeated

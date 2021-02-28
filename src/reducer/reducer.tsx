@@ -42,7 +42,7 @@ const initialState: State = {
         {
             id: 5,
             title: "Morning coffee",
-            deadline: new Date('February 21, 2022 03:24:00'),
+            deadline: new Date('February 28, 2021 03:24:00'),
             done: false,
             repeated: false
         }]

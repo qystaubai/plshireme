@@ -31,7 +31,6 @@ const BoardComponent: React.FC<Props> = (props: Props): ReactElement => {
                 </div>
 
                 <div className="calendar card">
-                    me calendar
                         {props.goals.map((goal: Goal) =>
                             <CalendarCardComponent {...goal} key={goal.id}/>
                         )}
