@@ -15,7 +15,9 @@ export const CalendarCardComponent: React.FC<Goal> = (goal) => {
 
     return (
         <div className="calendar-card card" style={style}>
-            {goal.title}
+            <div className="calendar-title">
+                {goal.title}
+            </div>
         </div>
 
     )

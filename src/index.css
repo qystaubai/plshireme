@@ -65,7 +65,7 @@ body {
     background-color: #48A9A6;
 }
 
-.goal-failed {
+.goal-expired {
     background-color: #BF3438;
 }
 
@@ -77,7 +77,6 @@ body {
     margin: .5vh .1vw;
     padding: .5vh 1vw;
     border: none;
-    background-color: #5F9DD4;
     font-size: 2rem;
 }
 
@@ -153,6 +152,28 @@ body {
 
 .add-goal__button:disabled {
     filter: opacity(40%);
+}
+
+.goal-actions {
+    display: flex;
+}
+
+.goal-actions__button {
+    width: 100%;
+    border-radius: .2rem;
+    background: none;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    transition: border-color .4s, color .4s;
+}
+
+.goal-actions__button:focus {
+    outline: none;
+}
+
+.goal-actions__button:hover {
+    color: #F7B32B;
+    border-color: #F7B32B;
 }
 
 .calendar {

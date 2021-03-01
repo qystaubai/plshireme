@@ -31,20 +31,6 @@ const initialState: State = {
             deadline: new Date('February 26, 2021 03:24:00'),
             done: false,
             repeated: false
-        },
-        {
-            id: 4,
-            title: "Brush teeth",
-            deadline: new Date('February 25, 2021 19:20:00'),
-            done: false,
-            repeated: false
-        },
-        {
-            id: 5,
-            title: "Morning coffee",
-            deadline: new Date('February 28, 2021 03:24:00'),
-            done: false,
-            repeated: false
         }]
 }
 

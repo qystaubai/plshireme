@@ -1,20 +1,13 @@
 import React, {ReactElement, useState} from "react";
-import {connect, ConnectedProps} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {goalAddedAction} from "../actions/actions";
-import {State} from "../types/types";
 import {Goal} from "../types/types";
+import {selectGoals} from "../selectors/selectors";
 
-const mapStateToProps = (state: State) => ({goals: state.goals});
-const mapDispatchToProps = {
-    goalAddedAction
-}
+export const AddGoalCardComponent: React.FC = (): ReactElement => {
 
-const connector = connect(mapStateToProps, mapDispatchToProps);
-
-type PropsFromRedux = ConnectedProps<typeof connector>;
-type Props = PropsFromRedux;
-
-export const AddGoalCardComponent: React.FC<Props> = (props): ReactElement => {
+    const goals = useSelector(selectGoals);
+    const dispatch = useDispatch();
 
     const emptyGoal: Goal = {
         id: -1,
@@ -50,10 +43,10 @@ export const AddGoalCardComponent: React.FC<Props> = (props): ReactElement => {
     }
 
     const handleGoalAdded = () => {
-        goal.id = props.goals[props.goals.length - 1].id + 1;
+        goal.id = goals[goals.length - 1].id + 1;
 
         if (goal && goal.id !== -1) {
-            props.goalAddedAction(goal)
+            dispatch(goalAddedAction(goal));
         }
         setGoal(emptyGoal);
         setShowForm(!showForm);
@@ -97,4 +90,4 @@ export const AddGoalCardComponent: React.FC<Props> = (props): ReactElement => {
         </div>
     )
 }
-export default connector(AddGoalCardComponent);
+export default AddGoalCardComponent;
